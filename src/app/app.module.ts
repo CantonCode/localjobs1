@@ -13,11 +13,13 @@ import { AppRoutes } from './app.routing';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 
-
+import { LandingLayoutComponent } from "./layouts/landing-layout/landing-layout.component";
 @NgModule({
   declarations: [
     AppComponent,
-    AdminLayoutComponent
+    AdminLayoutComponent,
+    LandingLayoutComponent
+
   ],
   imports: [
     BrowserAnimationsModule,
