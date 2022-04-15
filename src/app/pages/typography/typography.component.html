@@ -1,94 +1,57 @@
 <div class="row">
-  <div class="col-md-12">
+  <div class="col-md-12 ">
     <div class="card">
       <div class="card-header">
-        <h5 class="title">Paper Table Heading</h5>
-        <p class="category">Created using Montserrat Font Family</p>
+        <p style="font-size: 36px;">Create a Job Listing</p>
+        
       </div>
       <div class="card-body">
-        <div class="typography-line">
-          <h1>
-            <span>Header 1</span>The Life of Paper Dashboard </h1>
+        <form>
+          
+            <div class="row" style="margin: 43px 0 25px 25px;">
+              <div class="desc-rectangle col-md-3 col-3">
+                <p class="desc-title">Job Title</p>
+              </div>
+              <input type="text" class="form-control col-md-7" id="jobname" placeholder="Enter Listing Name" style="width: 40%;" >
+            </div>
+
+            <div class="row" style="margin: 43px 0 25px 25px;">
+              <div class="desc-rectangle col-md-3 col-4">
+                <p class="desc-title">Job Category</p>
+              </div>
+              <select class="form-control col-md-7" id="jobtype" style="width: 40%;">
+                <option value="" selected disabled>Please select a type</option>
+                <option>Garden</option>
+                <option>House</option>
+                <option>Building</option>
+              </select>
+            </div>
+
+            <div class="row" style="margin: 43px 0 25px 25px;">
+              <div class="desc-rectangle col-md-3 col-3">
+                <p class="desc-title">Job Description</p>
+              </div>
+              <textarea class="form-control col-md-7" id="jobtext" placeholder="Please enter details of the job" rows="1" style="width:40%; resize: vertical; max-height: none;"></textarea>
+            </div>
+            
+          
+        </form>
+        <div class="row">
+          <div class="col-5">
+          </div>
+          <div class="col-4">
+            <button type="button" class="btn" style=" width: 311px;
+            width: 222.6px;
+ height: 55px;
+ flex-grow: 0;
+ margin: 25px 0 128px 60px;
+ padding: 16.6px 0 19.2px 3.8px;
+ border-radius: 35px;
+ background-color: #4f84de;" >Create Listing</button>
+          </div>
         </div>
-        <div class="typography-line">
-          <h2>
-            <span>Header 2</span>The Life of Paper Dashboard </h2>
-        </div>
-        <div class="typography-line">
-          <h3>
-            <span>Header 3</span>The Life of Paper Dashboard </h3>
-        </div>
-        <div class="typography-line">
-          <h4>
-            <span>Header 4</span>The Life of Paper Dashboard </h4>
-        </div>
-        <div class="typography-line">
-          <h5>
-            <span>Header 5</span>The Life of Paper Dashboard </h5>
-        </div>
-        <div class="typography-line">
-          <h6>
-            <span>Header 6</span>The Life of Paper Dashboard </h6>
-        </div>
-        <div class="typography-line">
-          <p>
-            <span>Paragraph</span>
-            I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.
-          </p>
-        </div>
-        <div class="typography-line">
-          <span>Quote</span>
-          <blockquote>
-            <p class="blockquote blockquote-primary">
-              "I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at."
-              <br>
-              <br>
-              <small>
-                - Noaa
-              </small>
-            </p>
-          </blockquote>
-        </div>
-        <div class="typography-line">
-          <span>Muted Text</span>
-          <p class="text-muted">
-            I will be the leader of a company that ends up being worth billions of dollars, because I got the answers...
-          </p>
-        </div>
-        <div class="typography-line">
-          <span>Primary Text</span>
-          <p class="text-primary">
-            I will be the leader of a company that ends up being worth billions of dollars, because I got the answers...</p>
-        </div>
-        <div class="typography-line">
-          <span>Info Text</span>
-          <p class="text-info">
-            I will be the leader of a company that ends up being worth billions of dollars, because I got the answers... </p>
-        </div>
-        <div class="typography-line">
-          <span>Success Text</span>
-          <p class="text-success">
-            I will be the leader of a company that ends up being worth billions of dollars, because I got the answers... </p>
-        </div>
-        <div class="typography-line">
-          <span>Warning Text</span>
-          <p class="text-warning">
-            I will be the leader of a company that ends up being worth billions of dollars, because I got the answers...
-          </p>
-        </div>
-        <div class="typography-line">
-          <span>Danger Text</span>
-          <p class="text-danger">
-            I will be the leader of a company that ends up being worth billions of dollars, because I got the answers... </p>
-        </div>
-        <div class="typography-line">
-          <h2>
-            <span>Small Tag</span>
-            Header with small subtitle
-            <br>
-            <small>Use "small" tag for the headers</small>
-          </h2>
-        </div>
+        
+        
       </div>
     </div>
   </div>
