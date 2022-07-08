@@ -2,6 +2,8 @@ import { Component, OnInit, Renderer2, ViewChild, ElementRef } from '@angular/co
 import { ROUTES } from '../../sidebar/sidebar.component';
 import { Router } from '@angular/router';
 import { Location} from '@angular/common';
+import { MoneybuttonService } from 'app/services/moneybutton.service';
+import { User } from 'app/models/User.model';
 
 @Component({
     moduleId: module.id,
@@ -15,15 +17,19 @@ export class NavbarComponent implements OnInit{
     private nativeElement: Node;
     private toggleButton;
     private sidebarVisible: boolean;
+    userName: string;
+    user: User;
 
     public isCollapsed = true;
     @ViewChild("navbar-cmp", {static: false}) button;
 
-    constructor(location:Location, private renderer : Renderer2, private element : ElementRef, private router: Router) {
+    constructor(location:Location, private renderer : Renderer2, private element : ElementRef, private router: Router,private mbService:MoneybuttonService,) {
         this.location = location;
         this.nativeElement = element.nativeElement;
         this.sidebarVisible = false;
     }
+
+    
 
     ngOnInit(){
         this.listTitles = ROUTES.filter(listTitle => listTitle);
@@ -32,7 +38,16 @@ export class NavbarComponent implements OnInit{
         this.router.events.subscribe((event) => {
           this.sidebarClose();
        });
+
+        this.getCurrentUser();
     }
+
+    async getCurrentUser(){
+      this.user = await this.mbService.getuser();
+      this.userName = this.user.name;
+    }
+
+    
     getTitle(){
       var titlee = this.location.prepareExternalUrl(this.location.path());
       if(titlee.charAt(0) === '#'){

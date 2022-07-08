@@ -24,7 +24,7 @@ import { LandingLayoutComponent } from "./layouts/landing-layout/landing-layout.
   imports: [
     BrowserAnimationsModule,
     RouterModule.forRoot(AppRoutes,{
-      useHash: true
+      paramsInheritanceStrategy: "always"
     }),
     SidebarModule,
     NavbarModule,

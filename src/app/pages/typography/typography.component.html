@@ -1,4 +1,169 @@
-<div class="row">
+<!-- <div class="bs-stepper" id="stepper1">
+  <div class="bs-stepper-header row" role="tablist">
+    
+    <div class="step col-12 col-lg-2" data-target="#title-part">
+      <button type="button" class="step-trigger" role="tab" aria-controls="title-part" id="title-part-trigger">
+        <div class="row justify-content-center">
+          <span class="bs-stepper-circle col-12 ">1</span>
+          <span class="bs-stepper-label col-12">Job Title</span>
+        </div>
+      </button>
+    </div>
+    <div class="line"></div>
+    <div class="step  col-12 col-lg-2" data-target="#cost-part">
+      <button type="button" class="step-trigger" role="tab" aria-controls="information-part" id="information-part-trigger">
+        <div class="row justify-content-center">
+          <span class="bs-stepper-circle col-12 ">2</span>
+          <span class="bs-stepper-label col-12">Job Cost</span>
+        </div>
+        
+      </button>
+    </div>
+    <div class="line"></div>
+    <div class="step  col-12 col-lg-2" data-target="#location-part">
+      <button type="button" class="step-trigger" role="tab" aria-controls="information-part" id="information-part-trigger">
+        <span class="bs-stepper-circle">3</span>
+        <span class="bs-stepper-label">Job Location</span>
+      </button>
+    </div>
+    <div class="line"></div>
+    <div class="step col-12 col-lg-2" data-target="#desc-part">
+      <button type="button" class="step-trigger" role="tab" aria-controls="information-part" id="information-part-trigger">
+        <span class="bs-stepper-circle">4</span>
+        <span class="bs-stepper-label">Job Description</span>
+      </button>
+    </div>
+  </div>
+  <div class="bs-stepper-content">
+    
+    <div id="title-part" class="content" role="tabpanel" aria-labelledby="title-part-trigger">
+      <p class="text-center">test 1</p>
+      <button class="btn btn-primary" onclick="stepper1.next()">Next</button>
+    </div>
+
+  </div>
+</div> -->
+
+<div class="container">
+  <div class="row">
+    <div class="">
+      <div id="stepper1" class="bs-stepper">
+        <div class="bs-stepper-header">
+
+          <div class="step col-12 col-lg-2" data-target="#title-part">
+            <button type="button" class="step-trigger" role="tab" aria-controls="title-part" id="title-part-trigger">
+              <div class="row justify-content-center">
+                <span class="bs-stepper-circle col-12 ">1</span>
+                <span class="bs-stepper-label col-12">Job Title</span>
+              </div>
+            </button>
+          </div>
+
+          <div class="line"></div>
+          <div class="step  col-12 col-lg-2" data-target="#cost-part">
+            <button type="button" class="step-trigger" role="tab" aria-controls="cost-part" id="cost-part-trigger">
+              <div class="row justify-content-center">
+                <span class="bs-stepper-circle col-12 ">2</span>
+                <span class="bs-stepper-label col-12">Job Cost</span>
+              </div>
+            </button>
+          </div>
+
+          <div class="line"></div>
+          <div class="step  col-12 col-lg-2" data-target="#location-part">
+            <button type="button" class="step-trigger" role="tab" aria-controls="location-part" id="location-part-trigger">
+              <div class="row justify-content-center">
+                <span class="bs-stepper-circle col-12 ">3</span>
+                <span class="bs-stepper-label col-12">Job Location</span>
+              </div>
+            </button>
+          </div>
+
+          <div class="line"></div>
+          <div class="step  col-12 col-lg-2" data-target="#desc-part">
+            <button type="button" class="step-trigger" role="tab" aria-controls="desc-part" id="desc-part-trigger">
+              <div class="row justify-content-center">
+                <span class="bs-stepper-circle col-12 ">4</span>
+                <span class="bs-stepper-label col-12">Job Description</span>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <div class="bs-stepper-content ">
+          <div id="title-part" class="content justify-content-center">
+            <div class="card mx-auto" style="height: 400px;width: 75%;">
+              <div class="card-body p-0" >
+                <div class="row d-flex" style="height: 400px; ">
+                  <div class="col p-15 text-center " style="background-color:cornflowerblue; border-radius:10px 0px 0px 10px">
+                    <img src=" https://i.pinimg.com/originals/6d/00/b2/6d00b2a3b7dd96642ca14a158a53655e.png" alt="alternatetext" style="width:40%; height:40%; margin: 10PX;">
+                    <p style="margin: 10px;font-size: 30px;"> Job Title</p>
+                    <p style="margin: 10px;font-size: 11px;"> This job title is used to quickly describe the job at hand for a user who is viewing the job search</p>
+                  </div>
+
+                  <div class="col-7 p-15 text-center align-self-center">
+                    <p style="text-align:center;margin: 0px;font-size: 20px;"> Please Enter Title:</p>
+                    <div class="input-group input-group-lg w-50 mx-auto mt-3" >
+                      <input type="text" class="form-control font-bold" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                    </div>
+    
+                    <button class="btn mt-5" (click)="next()">Next</button>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+           
+          </div>
+          <div id="cost-part" class="content">
+            <div class="card mx-auto" style="height: 400px;width: 75%;">
+              <div class="card-body p-0 " >
+                <div class="row d-flex" style="height: 400px; ">
+                  <div class="col p-15 text-center " style="background-color:cornflowerblue; border-radius:10px 0px 0px 10px">
+                    <img src=" https://cdn-icons-png.flaticon.com/512/21/21145.png" alt="alternatetext" style="width:40%; height:40%; margin: 10PX;">
+                    <p style="margin: 10px;font-size: 30px;"> Job Pay</p>
+                    <p style="margin: 10px;font-size: 11px;"> This is the pay of the job. This number will attract customers if it is well valued/p>
+                  </div>
+
+                  <div class="col-7 p-15 text-center align-self-center">
+                    <p style="text-align:center;margin: 0px;font-size: 20px;"> Please Enter Pay:</p>
+                    <div class="input-group input-group-lg w-50 mx-auto mt-3" >
+                      <input type="text" class="form-control font-bold" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                    </div>
+    
+                    <button class="btn mt-5" (click)="next()">Next</button>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <div id="location-part" class="content">
+            <div class="card" style="height: 300px">
+              <div class="card-body text-center" >
+                <p style="text-align:center;margin: 0px;font-size: 40px;"> Please Enter Address</p>
+                <div class="input-group input-group-lg w-50 mx-auto mt-5" >
+                  <input type="text" class="form-control font-bold" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                </div>
+
+                <button class="btn mt-5" (click)="next()">Next</button>
+              </div>
+            </div>
+          </div>
+          <div id="desc-part" class="content">
+            <div class="card" style="height: 300px">
+              <div class="card-body" >
+                This is part 4.
+              </div>
+            </div>
+            <button class="btn btn-primary" (click)="next()">Next</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+<!-- <div class="row">
   <div class="col-md-12 ">
     <div class="card">
       <div class="card-header">
@@ -55,4 +220,5 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
+

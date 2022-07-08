@@ -7,10 +7,10 @@ export const AppRoutes: Routes = [
   {
     
       path: '',
-      component: LandingLayoutComponent, 
       children: [
           {
         path: '',
+        
         loadChildren:() => import( './layouts/landing-layout/landing-layout.module').then(x => x.LandingLayoutModule)
     }]},
   {
