@@ -47,118 +47,181 @@
 <div class="container">
   <div class="row">
     <div class="">
-      <div id="stepper1" class="bs-stepper">
-        <div class="bs-stepper-header">
+      <div class="bs-stepper-content ">
+        <!-- <div id="title-part" class="content justify-content-center">
+          <div class="card mx-auto" style="height: 575px;width: 95%;">
+            <div class="card-body p-0" >
+              <div class="row d-flex" style="height: 400px; ">
+                <div class="col p-15 text-center " style="background-color:cornflowerblue; border-radius:10px 0px 0px 10px">
+                  <img src=" https://i.pinimg.com/originals/6d/00/b2/6d00b2a3b7dd96642ca14a158a53655e.png" alt="alternatetext" style="width:40%; height:40%; margin: 10PX;">
+                  <p style="margin: 10px;font-size: 30px;"> Job Title</p>
+                  <p style="margin: 10px;font-size: 11px;"> This job title is used to quickly describe the job at hand for a user who is viewing the job search</p>
+                </div>
 
-          <div class="step col-12 col-lg-2" data-target="#title-part">
-            <button type="button" class="step-trigger" role="tab" aria-controls="title-part" id="title-part-trigger">
-              <div class="row justify-content-center">
-                <span class="bs-stepper-circle col-12 ">1</span>
-                <span class="bs-stepper-label col-12">Job Title</span>
+                <div class="col-7 p-15 text-center align-self-center">
+                  <p style="text-align:center;margin: 0px;font-size: 20px;"> Please Enter Title:</p>
+                  <div class="input-group input-group-lg w-50 mx-auto mt-3" >
+                    <input type="text" class="form-control font-bold" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                  </div>
+  
+                  <button class="btn mt-5" (click)="next()">Next</button>
+                </div>
               </div>
-            </button>
+              
+            </div>
           </div>
+         
+        </div> -->
 
-          <div class="line"></div>
-          <div class="step  col-12 col-lg-2" data-target="#cost-part">
-            <button type="button" class="step-trigger" role="tab" aria-controls="cost-part" id="cost-part-trigger">
-              <div class="row justify-content-center">
-                <span class="bs-stepper-circle col-12 ">2</span>
-                <span class="bs-stepper-label col-12">Job Cost</span>
+        <div id="title-part" class="content justify-content-center">
+          <div class="card mx-auto" style="height: 575px;width: 80%;">
+            <div class="card-body  d-flex align-items-center justify-content-center" style="padding: 50px" >
+              <div class="row d-flex">
+                <div class="col-12">
+                  <h3>Give your job document a title</h3>
+                </div>
+                <div class="col-8" style="color:#7E7E7E; font-size: 15px;">
+                  This helps workers judge if the job is for the. Use key words that describe the job.
+                </div>
+                <div class="col-4"></div>
+                <div class="col-12" style="padding:15px ;">
+                  <div class="input-group input-group-lg w-80" style="margin-top: 2%;">
+                    <input type="text" class="form-control font-bold"  placeholder="Enter job title here. Ex. House needs painting" maxlength="100">
+                  </div>
+                </div>
+                <div class="col-12 ">
+                  <button class="btn mt-5 pull-right " (click)="next()">Next</button>
+                </div>
               </div>
-            </button>
-          </div>
-
-          <div class="line"></div>
-          <div class="step  col-12 col-lg-2" data-target="#location-part">
-            <button type="button" class="step-trigger" role="tab" aria-controls="location-part" id="location-part-trigger">
-              <div class="row justify-content-center">
-                <span class="bs-stepper-circle col-12 ">3</span>
-                <span class="bs-stepper-label col-12">Job Location</span>
-              </div>
-            </button>
-          </div>
-
-          <div class="line"></div>
-          <div class="step  col-12 col-lg-2" data-target="#desc-part">
-            <button type="button" class="step-trigger" role="tab" aria-controls="desc-part" id="desc-part-trigger">
-              <div class="row justify-content-center">
-                <span class="bs-stepper-circle col-12 ">4</span>
-                <span class="bs-stepper-label col-12">Job Description</span>
-              </div>
-            </button>
+            </div>
           </div>
         </div>
 
-        <div class="bs-stepper-content ">
-          <div id="title-part" class="content justify-content-center">
-            <div class="card mx-auto" style="height: 400px;width: 75%;">
-              <div class="card-body p-0" >
-                <div class="row d-flex" style="height: 400px; ">
-                  <div class="col p-15 text-center " style="background-color:cornflowerblue; border-radius:10px 0px 0px 10px">
-                    <img src=" https://i.pinimg.com/originals/6d/00/b2/6d00b2a3b7dd96642ca14a158a53655e.png" alt="alternatetext" style="width:40%; height:40%; margin: 10PX;">
-                    <p style="margin: 10px;font-size: 30px;"> Job Title</p>
-                    <p style="margin: 10px;font-size: 11px;"> This job title is used to quickly describe the job at hand for a user who is viewing the job search</p>
-                  </div>
-
-                  <div class="col-7 p-15 text-center align-self-center">
-                    <p style="text-align:center;margin: 0px;font-size: 20px;"> Please Enter Title:</p>
-                    <div class="input-group input-group-lg w-50 mx-auto mt-3" >
-                      <input type="text" class="form-control font-bold" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-                    </div>
-    
-                    <button class="btn mt-5" (click)="next()">Next</button>
+        <div id="desc-part" class="content justify-content-center">
+          <div class="card mx-auto" style="height: 575px;width: 80%;">
+            <div class="card-body  d-flex align-items-center justify-content-center" style="padding: 50px" >
+              <div class="row d-flex">
+                <div class="col-12">
+                  <h3>Describe the work that needs doing.</h3>
+                </div>
+                <div class="col-8" style="color:#7E7E7E; font-size: 15px;">
+                  Use words the describe actions or objects related to the job that needs doing.
+                </div>
+                <div class="col-4"></div>
+                <div class="col-12" style="padding:15px ;">
+                  <div class="form-group">
+                    <textarea class="form-control" style="resize:vertical ;" rows="10" id="comment"></textarea>
                   </div>
                 </div>
-                
-              </div>
-            </div>
-           
-          </div>
-          <div id="cost-part" class="content">
-            <div class="card mx-auto" style="height: 400px;width: 75%;">
-              <div class="card-body p-0 " >
-                <div class="row d-flex" style="height: 400px; ">
-                  <div class="col p-15 text-center " style="background-color:cornflowerblue; border-radius:10px 0px 0px 10px">
-                    <img src=" https://cdn-icons-png.flaticon.com/512/21/21145.png" alt="alternatetext" style="width:40%; height:40%; margin: 10PX;">
-                    <p style="margin: 10px;font-size: 30px;"> Job Pay</p>
-                    <p style="margin: 10px;font-size: 11px;"> This is the pay of the job. This number will attract customers if it is well valued/p>
-                  </div>
-
-                  <div class="col-7 p-15 text-center align-self-center">
-                    <p style="text-align:center;margin: 0px;font-size: 20px;"> Please Enter Pay:</p>
-                    <div class="input-group input-group-lg w-50 mx-auto mt-3" >
-                      <input type="text" class="form-control font-bold" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-                    </div>
-    
-                    <button class="btn mt-5" (click)="next()">Next</button>
-                  </div>
+                <div class="col-12 ">
+                  <button class="btn mt-5 pull-right " (click)="next()">Next</button>
+                  <button class="btn mt-5 pull-right " (click)="back()">Back</button>
                 </div>
-                
               </div>
             </div>
-          </div>
-          <div id="location-part" class="content">
-            <div class="card" style="height: 300px">
-              <div class="card-body text-center" >
-                <p style="text-align:center;margin: 0px;font-size: 40px;"> Please Enter Address</p>
-                <div class="input-group input-group-lg w-50 mx-auto mt-5" >
-                  <input type="text" class="form-control font-bold" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-                </div>
-
-                <button class="btn mt-5" (click)="next()">Next</button>
-              </div>
-            </div>
-          </div>
-          <div id="desc-part" class="content">
-            <div class="card" style="height: 300px">
-              <div class="card-body" >
-                This is part 4.
-              </div>
-            </div>
-            <button class="btn btn-primary" (click)="next()">Next</button>
           </div>
         </div>
+
+        <div id="category-part" class="content justify-content-center">
+          <div class="card mx-auto" style="height: 575px;width: 80%;">
+            <div class="card-body  d-flex align-items-center justify-content-center" style="padding: 50px" >
+              <div class="row d-flex">
+                <div class="col-12">
+                  <h3>Please select an industry and category for your job.</h3>
+                </div>
+                <div class="col-8" style="color:#7E7E7E; font-size: 15px;">
+                  This helps organise our listings, but also makes it easier for workers to find your job document and get in contact.
+                </div>
+                <div class="col-4"></div>
+                <div class="col-12" style="padding:15px ;">
+                  <select class="form-select" aria-label="Default select example" style="width: 45% ;">
+                    <option selected>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+
+                <div class="col-12" style="padding:15px ;">
+                  <select class="form-select" aria-label="Default select example" style="width: 45% ;">
+                    <option selected>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <div class="col-12 ">
+                  <button class="btn mt-5 pull-right " (click)="next()">Next</button>
+                  <button class="btn mt-5 pull-right " (click)="back()">Back</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div id="location-part" class="content">
+          <div class="card mx-auto" style="height: 575px;width: 80%;">
+            <div class="card-body  d-flex align-items-center justify-content-center" style="padding: 50px" >
+              <div class="row d-flex">
+                <div class="col-12">
+                  <h3>What is the location of your job?</h3>
+                </div>
+                <div class="col-10" style="color:#7E7E7E; font-size: 15px;">
+                  Location will only be shared with successful candidates.
+                  If you wish to skip this, and disclose the address directly with clients, just add a town or district.
+                </div>
+                <div class="col-2"></div>
+                <div class="col-12">
+                  <form>
+                    <div class="form-group" style="width:45%;padding:15px">
+                      <input type="text" style="border-radius:10px 10px 0px 0px ;" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Street">
+                      <input type="text" class="form-control"  style="border-radius:0px 0px 0px 0px ;"id="exampleInputPassword1" placeholder="Flat, suite, etc.(Optional)">
+                      <input type="text" class="form-control"  style="border-radius:0px 0px 0px 0px ;"id="exampleInputPassword1" placeholder="City/Town">
+                      <input type="text" class="form-control"  style="border-radius:0px 0px 0px 0px ;"id="exampleInputPassword1" placeholder="County">
+                      <input type="text" class="form-control"  style="border-radius:0px 0px 10px 10px ;"id="exampleInputPassword1" placeholder="Country">
+                    </div>
+                  </form>
+                </div>
+                <div class="col-12 ">
+                  <button class="btn mt-5 pull-right " (click)="next()">Next</button>
+                  <button class="btn mt-5 pull-right " (click)="back()">Back</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="timeframe-part" class="content">
+          <div class="card mx-auto" style="height: 575px;width: 80%;">
+            <div class="card-body  d-flex align-items-center justify-content-center" style="padding: 50px" >
+              <div class="row d-flex">
+                <div class="col-12">
+                  <h3>When do you want the job to be done?</h3>
+                </div>
+                <div class="col-10" style="color:#7E7E7E; font-size: 15px;">
+                  If you think it will take longer than a day, or if there is a window of days that it can be done in, please select them below.
+                </div>
+                <div class="col-2"></div>
+                <div class="col-12">
+                  <form>
+                    <div class="form-group" style="width:45%;padding:15px">
+                      <input type="text" style="border-radius:10px 10px 0px 0px ;" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Street">
+                      <input type="text" class="form-control"  style="border-radius:0px 0px 0px 0px ;"id="exampleInputPassword1" placeholder="Flat, suite, etc.(Optional)">
+                      <input type="text" class="form-control"  style="border-radius:0px 0px 0px 0px ;"id="exampleInputPassword1" placeholder="City/Town">
+                      <input type="text" class="form-control"  style="border-radius:0px 0px 0px 0px ;"id="exampleInputPassword1" placeholder="County">
+                      <input type="text" class="form-control"  style="border-radius:0px 0px 10px 10px ;"id="exampleInputPassword1" placeholder="Country">
+                    </div>
+                  </form>
+                </div>
+                <div class="col-12 ">
+                  <button class="btn mt-5 pull-right " (click)="next()">Next</button>
+                  <button class="btn mt-5 pull-right " (click)="back()">Back</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
 
       </div>
     </div>

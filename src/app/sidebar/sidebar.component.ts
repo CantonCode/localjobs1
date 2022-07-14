@@ -11,11 +11,11 @@ export interface RouteInfo {
 export const ROUTES: RouteInfo[] = [
     { path: '/joblistings',     title: 'Job Listings',         icon:'nc-zoom-split',       class: '' },
     // { path: '/icons',         title: 'Icons',             icon:'nc-diamond',    class: '' },
-    { path: '/activejobs',          title: 'Active Jobs',              icon:'nc-atom',      class: '' },
-    { path: '/activebids', title: 'Active Bids',     icon:'nc-watch-time',    class: '' },
+    // { path: '/activejobs',          title: 'Active Jobs',              icon:'nc-atom',      class: '' },
+    // { path: '/activebids', title: 'Active Bids',     icon:'nc-watch-time',    class: '' },
     { path: '/createjob',          title: 'Create Job',      icon:'nc-simple-add',  class: '' },
-    { path: '/yourjobs',         title: 'Your Jobs',        icon:'nc-book-bookmark',    class: '' },
-    { path: '/profile',    title: 'Profile Settings',        icon:'nc-circle-10', class: '' },
+    // { path: '/yourjobs',         title: 'Your Jobs',        icon:'nc-book-bookmark',    class: '' },
+    // { path: '/profile',    title: 'Profile Settings',        icon:'nc-circle-10', class: '' },
    
 ];
 
