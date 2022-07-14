@@ -172,13 +172,13 @@
                 </div>
                 <div class="col-2"></div>
                 <div class="col-12">
-                  <form>
+                  <form [formGroup]="addressForm">
                     <div class="form-group" style="width:45%;padding:15px">
-                      <input type="text" style="border-radius:10px 10px 0px 0px ;" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Street">
-                      <input type="text" class="form-control"  style="border-radius:0px 0px 0px 0px ;"id="exampleInputPassword1" placeholder="Flat, suite, etc.(Optional)">
-                      <input type="text" class="form-control"  style="border-radius:0px 0px 0px 0px ;"id="exampleInputPassword1" placeholder="City/Town">
-                      <input type="text" class="form-control"  style="border-radius:0px 0px 0px 0px ;"id="exampleInputPassword1" placeholder="County">
-                      <input type="text" class="form-control"  style="border-radius:0px 0px 10px 10px ;"id="exampleInputPassword1" placeholder="Country">
+                      <input type="text"style="border-radius:10px 10px 0px 0px ;" class="form-control"  id="street" name="street"   aria-describedby="emailHelp" placeholder="Street">
+                      <input type="text" class="form-control"  style="border-radius:0px 0px 0px 0px ;" placeholder="Flat, suite, etc.(Optional)">
+                      <input type="text" id="city" class="form-control"  style="border-radius:0px 0px 0px 0px ;" placeholder="City/Town">
+                      <input type="text" id="county" class="form-control"  style="border-radius:0px 0px 0px 0px ;" placeholder="County">
+                      <input type="text" id="country" class="form-control"  style="border-radius:0px 0px 10px 10px ;" placeholder="Country">
                     </div>
                   </form>
                 </div>

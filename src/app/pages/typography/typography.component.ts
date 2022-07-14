@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { NgbCalendar, NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 import Stepper from 'bs-stepper';
 
@@ -22,6 +23,7 @@ export class TypographyComponent implements OnInit{
     jobCat2:string;
     jobCat2List = [];
 
+
   constructor(private calendar: NgbCalendar) {
   }
 
@@ -38,19 +40,25 @@ export class TypographyComponent implements OnInit{
     }
 
     next(currCard){
-      this.logDetails();
-       console.log(currCard)
-       var currIndex = this.slides.indexOf(currCard);
-       
-       if(currIndex == this.slides.length-1){
-        console.log("Last Card")
-       }else{
-        var nextIndex = currIndex + 1;
-        currCard = this.slides[nextIndex];
-        console.log(currCard);
+      var valid = this.validate(currCard);
+      if(valid){
+        console.log(currCard)
+        var currIndex = this.slides.indexOf(currCard);
+        
+        if(currIndex == this.slides.length-1){
+         console.log("Last Card")
+        }else{
+         var nextIndex = currIndex + 1;
+         currCard = this.slides[nextIndex];
+         console.log(currCard);
+ 
+         this.currentSlide = currCard;
+        }
+      }else{
+        
+      }
 
-        this.currentSlide = currCard;
-       }
+      
     }
 
     back(currCard){
@@ -69,9 +77,7 @@ export class TypographyComponent implements OnInit{
        }
    }
 
-   selectToday() {
-    this.calendarDay = this.calendar.getToday();
-  }
+ 
 
   logDetails(){
     console.log(this.jobTitle);
@@ -100,6 +106,52 @@ export class TypographyComponent implements OnInit{
     }
   }
 
+  validate(card){
+    switch (card) {
+      case 'title':
+          console.log(this.jobTitle);
+          if(this.jobTitle == undefined ||  this.onlySpaces(this.jobTitle)){
+            console.log("INVALID");
+            return false;
+          }
+        break;
+
+        case 'desc':
+          console.log(this.jobDescription);
+          if(this.jobDescription == undefined ||  this.onlySpaces(this.jobDescription)){
+            console.log("INVALID");
+            return false;
+          }
+        break;
+
+        case 'category':
+          console.log(this.jobCat2);
+          if(this.jobCat2 == undefined){
+            console.log("INVALID");
+            return false;
+          }
+        break;
+        
+        case 'date':
+          console.log(this.calendarDay);
+          if(this.calendarDay == null){
+            console.log("NOOOP DATTEEEE");
+            return false;
+          }
+
+        break;
+
+      
+    }
+
+    return true;
+  }
+
+  onlySpaces(str) {
+    return /^\s*$/.test(str);
+  }
+}
+
     
 
-}
+
