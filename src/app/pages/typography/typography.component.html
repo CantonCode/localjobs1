@@ -86,7 +86,7 @@
                 <div class="col-4"></div>
                 <div class="col-12" style="padding:15px ;">
                   <div class="input-group input-group-lg w-80" style="margin-top: 2%;">
-                    <input type="text" class="form-control font-bold"  placeholder="Enter job title here. Ex. House needs painting" maxlength="100">
+                    <input type="text" class="form-control font-bold"  placeholder="Enter job title here. Ex. House needs painting" maxlength="100" [(ngModel)]="jobTitle">
                   </div>
                 </div>
                 <div class="col-12 ">
@@ -110,7 +110,7 @@
                 <div class="col-4"></div>
                 <div class="col-12" style="padding:15px ;">
                   <div class="form-group">
-                    <textarea class="form-control" style="resize:vertical ;" rows="10" id="comment"></textarea>
+                    <textarea class="form-control" style="resize:vertical ;" rows="10" id="comment" [(ngModel)]="jobDescription"></textarea>
                   </div>
                 </div>
                 <div class="col-12 ">
@@ -134,20 +134,20 @@
                 </div>
                 <div class="col-4"></div>
                 <div class="col-12" style="padding:15px ;">
-                  <select class="form-select" aria-label="Default select example" style="width: 45% ;">
-                    <option selected>Open this select menu</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                  <select class="form-select" aria-label="Default select example" style="width: 45% ;" [(ngModel)]="jobCat1" (change)="jobCat1Change($event.target.value)" placeholder="Select Industry">
+                    <option value="" disabled selected>Select the Industry</option>
+                    <option value="Construction">Construction</option>
+                    <option value="Land">Land</option>
+                    <option value="Cleaning">Cleaning</option>
                   </select>
                 </div>
 
                 <div class="col-12" style="padding:15px ;">
-                  <select class="form-select" aria-label="Default select example" style="width: 45% ;">
-                    <option selected>Open this select menu</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                  <select class="form-select" aria-label="Default select example" style="width: 45% ;" [(ngModel)]="jobCat2" [disabled]="!jobCat1" placeholder="Select Category">
+                    <option value="" disabled selected>Select the Category</option>
+                    <option *ngFor="let job of jobCat2List" [value]="job">
+                      {{ job }}
+                   </option>
                   </select>
                 </div>
                 <div class="col-12 ">

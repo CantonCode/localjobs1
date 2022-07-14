@@ -16,6 +16,11 @@ export class TypographyComponent implements OnInit{
   date: {year: number, month: number};
   slides = ['title','desc','category','address','date'];
   currentSlide = 'title';
+    jobTitle:string;
+    jobDescription:string;
+    jobCat1:string;
+    jobCat2:string;
+    jobCat2List = [];
 
   constructor(private calendar: NgbCalendar) {
   }
@@ -33,6 +38,7 @@ export class TypographyComponent implements OnInit{
     }
 
     next(currCard){
+      this.logDetails();
        console.log(currCard)
        var currIndex = this.slides.indexOf(currCard);
        
@@ -48,6 +54,7 @@ export class TypographyComponent implements OnInit{
     }
 
     back(currCard){
+      
       console.log(currCard)
        var currIndex = this.slides.indexOf(currCard);
        
@@ -64,6 +71,33 @@ export class TypographyComponent implements OnInit{
 
    selectToday() {
     this.calendarDay = this.calendar.getToday();
+  }
+
+  logDetails(){
+    console.log(this.jobTitle);
+    console.log(this.jobDescription);
+    console.log(this.jobCat1);
+    console.log(this.jobCat2);
+  }
+
+  jobCat1Change(category){
+    console.log(category);
+    this.jobCat2List = []
+
+    switch (category) {
+      case "Construction":
+          this.jobCat2List = ["Painting","Carpentry","Roofing","Plumbing"];
+        break;
+      
+      case "Land":
+          this.jobCat2List = ["Mowing","Digging","Weeding"];
+        break;
+
+      case "Cleaning":
+          this.jobCat2List = ["House","Factory"];
+        break
+    
+    }
   }
 
     
