@@ -73,7 +73,7 @@
          
         </div> -->
 
-        <div id="title-part" class="content justify-content-center">
+        <div id="title-part" class="content justify-content-center" *ngIf="currentSlide == 'title'" >
           <div class="card mx-auto" style="height: 575px;width: 80%;">
             <div class="card-body  d-flex align-items-center justify-content-center" style="padding: 50px" >
               <div class="row d-flex">
@@ -90,14 +90,14 @@
                   </div>
                 </div>
                 <div class="col-12 ">
-                  <button class="btn mt-5 pull-right " (click)="next()">Next</button>
+                  <button class="btn mt-5 pull-right " (click)="next('title')">Next</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div id="desc-part" class="content justify-content-center">
+        <div id="desc-part" class="content justify-content-center" *ngIf="currentSlide == 'desc'">
           <div class="card mx-auto" style="height: 575px;width: 80%;">
             <div class="card-body  d-flex align-items-center justify-content-center" style="padding: 50px" >
               <div class="row d-flex">
@@ -114,15 +114,15 @@
                   </div>
                 </div>
                 <div class="col-12 ">
-                  <button class="btn mt-5 pull-right " (click)="next()">Next</button>
-                  <button class="btn mt-5 pull-right " (click)="back()">Back</button>
+                  <button class="btn mt-5 pull-right " (click)="next('desc')">Next</button>
+                  <button class="btn mt-5 pull-right " (click)="back('desc')">Back</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div id="category-part" class="content justify-content-center">
+        <div id="category-part" class="content justify-content-center" *ngIf="currentSlide == 'category'">
           <div class="card mx-auto" style="height: 575px;width: 80%;">
             <div class="card-body  d-flex align-items-center justify-content-center" style="padding: 50px" >
               <div class="row d-flex">
@@ -151,15 +151,15 @@
                   </select>
                 </div>
                 <div class="col-12 ">
-                  <button class="btn mt-5 pull-right " (click)="next()">Next</button>
-                  <button class="btn mt-5 pull-right " (click)="back()">Back</button>
+                  <button class="btn mt-5 pull-right " (click)="next('category')">Next</button>
+                  <button class="btn mt-5 pull-right " (click)="back('category')">Back</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
         
-        <div id="location-part" class="content">
+        <div id="location-part" class="content" *ngIf="currentSlide == 'address'">
           <div class="card mx-auto" style="height: 575px;width: 80%;">
             <div class="card-body  d-flex align-items-center justify-content-center" style="padding: 50px" >
               <div class="row d-flex">
@@ -183,15 +183,15 @@
                   </form>
                 </div>
                 <div class="col-12 ">
-                  <button class="btn mt-5 pull-right " (click)="next()">Next</button>
-                  <button class="btn mt-5 pull-right " (click)="back()">Back</button>
+                  <button class="btn mt-5 pull-right " (click)="next('address')">Next</button>
+                  <button class="btn mt-5 pull-right " (click)="back('address')">Back</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div id="timeframe-part" class="content">
+        <div id="timeframe-part" class="content" *ngIf="currentSlide == 'date'">
           <div class="card mx-auto" style="height: 575px;width: 80%;">
             <div class="card-body  d-flex align-items-center justify-content-center" style="padding: 50px" >
               <div class="row d-flex">
@@ -202,20 +202,12 @@
                   If you think it will take longer than a day, or if there is a window of days that it can be done in, please select them below.
                 </div>
                 <div class="col-2"></div>
-                <div class="col-12">
-                  <form>
-                    <div class="form-group" style="width:45%;padding:15px">
-                      <input type="text" style="border-radius:10px 10px 0px 0px ;" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Street">
-                      <input type="text" class="form-control"  style="border-radius:0px 0px 0px 0px ;"id="exampleInputPassword1" placeholder="Flat, suite, etc.(Optional)">
-                      <input type="text" class="form-control"  style="border-radius:0px 0px 0px 0px ;"id="exampleInputPassword1" placeholder="City/Town">
-                      <input type="text" class="form-control"  style="border-radius:0px 0px 0px 0px ;"id="exampleInputPassword1" placeholder="County">
-                      <input type="text" class="form-control"  style="border-radius:0px 0px 10px 10px ;"id="exampleInputPassword1" placeholder="Country">
-                    </div>
-                  </form>
+                <div class="col-12 " style="padding-top: 15px;text-align:center;">
+                  <ngb-datepicker #dp [(ngModel)]="calendarDay" (navigate)="date = $event.next"></ngb-datepicker>
                 </div>
                 <div class="col-12 ">
-                  <button class="btn mt-5 pull-right " (click)="next()">Next</button>
-                  <button class="btn mt-5 pull-right " (click)="back()">Back</button>
+                  <button class="btn mt-5 pull-right " (click)="next('date')">Next</button>
+                  <button class="btn mt-5 pull-right " (click)="back('date')">Back</button>
                 </div>
               </div>
             </div>
