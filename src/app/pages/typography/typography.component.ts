@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { NgbCalendar, NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 import Stepper from 'bs-stepper';
+import { Job } from 'app/models/job.model';
 
 
 @Component({
@@ -22,31 +23,30 @@ export class TypographyComponent implements OnInit{
     jobCat1:string;
     jobCat2:string;
     jobCat2List = [];
+    jobDocument: Job;
+    jobDate:Date;
+
 
 
   constructor(private calendar: NgbCalendar) {
   }
 
     ngOnInit(){
-        
 
-        var stepper1Node = document.getElementById('stepper1')
-        this.stepper1 = new Stepper(document.querySelector('#stepper1'))
+      
 
-          stepper1Node.addEventListener('show.bs-stepper', function (event) {
-            console.warn('show.bs-stepper', event)
-          })
-          
     }
 
     next(currCard){
       var valid = this.validate(currCard);
+
       if(valid){
         console.log(currCard)
         var currIndex = this.slides.indexOf(currCard);
-        
         if(currIndex == this.slides.length-1){
-         console.log("Last Card")
+         console.log("Last Card");
+         this.createJobObject();
+         this.currentSlide = "confirmDetails";
         }else{
          var nextIndex = currIndex + 1;
          currCard = this.slides[nextIndex];
@@ -133,10 +133,13 @@ export class TypographyComponent implements OnInit{
         break;
         
         case 'date':
-          console.log(this.calendarDay);
+          
           if(this.calendarDay == null){
             console.log("NOOOP DATTEEEE");
             return false;
+          }else{
+            this.jobDate = new Date(this.calendarDay.year,this.calendarDay.month, this.calendarDay.day);
+            console.log(this.jobDate);
           }
 
         break;
@@ -145,6 +148,19 @@ export class TypographyComponent implements OnInit{
     }
 
     return true;
+  }
+
+  createJobObject(){
+    this.jobDocument = new Job(this.jobTitle,this.jobDescription,[this.jobCat1,this.jobCat2],"KERRY",this.jobDate)
+    console.log(this.jobDocument);
+  }
+
+  confirm(){
+    
+  }
+
+  edit(){
+    this.currentSlide = 'date';
   }
 
   onlySpaces(str) {

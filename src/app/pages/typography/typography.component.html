@@ -214,6 +214,30 @@
           </div>
       </div>
 
+      <div id="timeframe-part" class="content" *ngIf="currentSlide == 'confirmDetails'">
+        <div class="card mx-auto" style="height: 575px;width: 80%;">
+          <div class="card-body  d-flex align-items-center justify-content-center" style="padding: 50px" >
+            <div class="row d-flex">
+              <div class="col-12">
+                <h3>Please Confirm Information Below?</h3>
+              </div>
+              
+              <div class="col-12 " style="padding-top: 15px;text-align:center;">
+                <p>Job Name: {{jobDocument.jobName}}</p>
+                <p>Job Description: {{jobDocument.jobName}}</p>
+                <p>Job Category: {{jobDocument.jobCat[1]}} - {{jobDocument.jobCat[0]}}</p>
+                <p>Job Address: {{jobDocument.jobAddress}}</p>
+                <p>Job Date: {{jobDocument.jobDate}}</p>
+              </div>
+              <div class="col-12 ">
+                <button class="btn mt-5 pull-right " (click)="confirm()">Confirm</button>
+                <button class="btn mt-5 pull-right " (click)="edit()">Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
 
       </div>
     </div>
