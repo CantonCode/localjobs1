@@ -19,7 +19,6 @@ import { LandingLayoutComponent } from "./layouts/landing-layout/landing-layout.
     AppComponent,
     AdminLayoutComponent,
     LandingLayoutComponent
-
   ],
   imports: [
     BrowserAnimationsModule,

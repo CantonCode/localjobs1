@@ -25,10 +25,6 @@ export class MoneyButtonRedirectComponent implements OnInit{
     user: User;
     constructor(private sessionStorage:SessionStorageService,private router: Router){}
 
-		
-    
-  
-
     async ngOnInit(){
 
         const client = this.client1;
