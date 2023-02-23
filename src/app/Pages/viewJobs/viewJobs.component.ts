@@ -22,7 +22,7 @@ export class ViewJobsComponent implements OnInit {
   constructor(private http:HttpClient) { }
 
   ngOnInit() {
-    this.http.get<Job[]>("https://shrouded-reef-89389.herokuapp.com/api/jobs/").subscribe((data: Job[]) => {
+    this.http.get<Job[]>("https://lb-mvp-backend.onrender.com/api/jobs/").subscribe((data: Job[]) => {
               this.jobs = data;
               console.log(this.jobs);
               this.jobResults = this.jobs.length;
