@@ -1,7 +1,7 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
-import { Job } from '../../models/job.model';
-import { AccountService } from '../../_services/account.service';
+import { Job } from 'app/models/job.model';
+import { AccountService } from 'app/_services/account.service';
 
 @Component({
   selector: 'app-create-jobs',
@@ -210,7 +210,7 @@ submitJob(){
 
   console.log(this.finalJob);
   
-  this.http.post<Job>('https://lb-mvp-backend.onrender.com/api/jobs/', this.finalJob,{observe: 'response'}).subscribe({
+  this.http.post<Job>('https://shrouded-reef-89389.herokuapp.com/api/jobs/', this.finalJob,{observe: 'response'}).subscribe({
 
         next: response => {
            console.log(response);

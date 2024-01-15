@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Job } from '../../../../models/job.model';
-import { JobsService } from '../../../../_services/jobs.service';
+import { Job } from 'app/models/job.model';
+import { JobsService } from 'app/_services/jobs.service';
 import { first } from 'rxjs/operators';
 
 @Component({

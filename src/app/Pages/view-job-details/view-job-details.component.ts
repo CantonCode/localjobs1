@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { BasicAccount } from '../../models/basic.account.model';
-import { Job } from '../../models/job.model';
-import { AccountService } from '../../_services/account.service';
-import { JobsService } from '../../_services/jobs.service';
+import { BasicAccount } from 'app/models/basic.account.model';
+import { Job } from 'app/models/job.model';
+import { AccountService } from 'app/_services/account.service';
+import { JobsService } from 'app/_services/jobs.service';
 import { pipe } from 'rxjs';
 import { first } from 'rxjs/operators';
 

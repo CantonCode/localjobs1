@@ -1,0 +1,49 @@
+<div>
+    <div class="content" style="align-items: center;justify-content: center;display: flex;">
+        <div class="container">
+
+            <div class="nav-header">
+                <div class="row" style="padding:20px">
+                    
+                    <div class="col-6 my-auto">
+                        <div class="filter-bar" >
+                            <button class="btn" style="color:black; background-color:white;border-radius: 50px;" routerLink="/find-worker">
+                                <i class="fa-solid fa-arrow-left"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-6">   
+                </div>  
+            </div>
+
+            <hr width="90%" />
+            
+
+            <div class="spinner" style="justify-content: center;display: flex;text-align: center;">
+                <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1" ></span>
+            </div>
+            
+            <div *ngIf="!loading" class="row">
+                <div class="col-12" style="align-items: center;justify-content: left;display: flex;">
+                    <div class="public-profile-view" style="margin-top: 20px;">
+                        <h3 class="user-title" style="font-weight: bold; margin-bottom: 0.1rem;">{{user.firstName}} {{user.lastName}}</h3>
+                        <h5 class="user-title" style=" margin-bottom: 0.1rem;">{{user.address}}</h5>
+                        <h5 class="user-title" style=" margin-bottom: 0.1rem;">{{user.created}}</h5>
+                        
+                               
+                                
+                                    
+                                    
+                                  
+                                  
+                            
+                             
+                            
+                    </div>
+                  </div>
+            
+            </div>
+        </div>
+    </div>
+</div>
+

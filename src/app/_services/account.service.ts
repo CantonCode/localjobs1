@@ -6,8 +6,8 @@ import { map, finalize } from 'rxjs/operators';
 
 import { environment } from '../../environments/environment';
 import { Account } from '../models/account.model';
-import { BasicAccount } from '../models/basic.account.model';
-import { Job } from '../models/job.model';
+import { BasicAccount } from 'app/models/basic.account.model';
+import { Job } from 'app/models/job.model';
 
 const baseUrl = `${environment.apiUrl}/accounts`;
 const jobUrl = `${environment.apiUrl}/api/jobs`;
@@ -79,8 +79,16 @@ export class AccountService {
         return this.http.get<Account[]>(baseUrl);
     }
 
+    getAllWorkers() {
+        return this.http.get<Worker[]>(`${baseUrl}/getAllWorkers`);
+    }
+
     getById(id: string) {
         return this.http.get<Account>(`${baseUrl}/${id}`);
+    }
+    
+    getWorkerById(id: string) {
+        return this.http.get<Worker>(`${baseUrl}/getWorkerById/${id}`);
     }
 
     getJobCreatorById(id:string){

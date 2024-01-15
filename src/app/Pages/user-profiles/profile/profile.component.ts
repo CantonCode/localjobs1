@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Job } from '../../../models/job.model';
-import { AccountService } from '../../../_services/account.service';
+import { Job } from 'app/models/job.model';
+import { AccountService } from 'app/_services/account.service';
 import { first } from 'rxjs/operators';
 
 @Component({
